@@ -13,36 +13,36 @@ complete on its own; the feature should be usable or testable.
 
 # PHASE 0 — PROJECT SETUP
 -----------------------
-0.1  Create the project folder
-0.2  Initialize the Git repository
-0.3  Initialize the backend
-0.4  Install Express
-0.5  Run a basic server
-0.6  Add a /health route
-0.7  Initialize the frontend
-0.8  Run the frontend
-0.9  Test frontend-to-backend communication
-0.10 Create MongoDB Atlas database
-0.11 Connect MongoDB to the backend
-0.12 Configure environment variables (.env)
+*0.1  Create the project folder
+*0.2  Initialize the Git repository
+*0.3  Initialize the backend
+*0.4  Install Express
+*0.5  Run a basic server
+*0.6  Add a /health route
+*0.7  Initialize the frontend
+*0.8  Run the frontend
+*0.9  Test frontend-to-backend communication
+*0.10 Create MongoDB Atlas database
+*0.11 Connect MongoDB to the backend
+*0.12 Configure environment variables (.env)
 
 Completion milestone: Frontend, backend, and MongoDB are connected.
 
 
 # PHASE 1 — AUTHENTICATION
 ------------------------
-1.1  Create the User schema
-1.2  Create the User model
-1.3  Create the register controller
-1.4  Add the register route
-1.5  Test registration in Postman
-1.6  Add password hashing
-1.7  Create the login controller
-1.8  Add the login route
-1.9  Generate JWT on login
-1.10 Create authentication middleware
-1.11 Add protected /me route
-1.12 Add logout
+*1.1  Create the User schema
+*1.2  Create the User model
+*1.3  Create the register controller
+*1.4  Add the register route
+*1.5  Test registration in Postman
+*1.6  Add password hashing
+*1.7  Create the login controller
+*1.8  Add the login route
+*1.9  Generate JWT on login
+*1.10 Create authentication middleware
+*1.11 Add protected /me route
+-1.12 Add logout
 
 Completion milestone: A user can register, log in, and access protected data.
 

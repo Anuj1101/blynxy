@@ -1,4 +1,6 @@
 const express=require('express')
+const dns=require('dns')
+dns.setServers(['8.8.8.8','8.8.4.4'])
 const cors=require("cors")
 const dotenv=require('dotenv');
 const connectDb = require('./config/db');
@@ -7,7 +9,9 @@ const app=express()
 app.use(cors())
 app.use(express.json())
 const port=process.env.PORT;
-
+const authRoutes=require('./routes/authRoutes')
+const authmiddleware=require('./middlewares/authmiddleware')
+const userRoutes=require('./routes/userRoutes')
 connectDb();
 
 app.get('/health',(req,res)=>{
@@ -19,7 +23,8 @@ app.post('/health',(req,res)=>{
     })
 })
 
-
+app.use('/api/auth/',authRoutes)
+app.use('/api/',authmiddleware,userRoutes)
 
 app.listen(port,()=>{
     console.log(`server started at http://localhost:${port}`)
