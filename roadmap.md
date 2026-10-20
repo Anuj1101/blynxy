@@ -42,17 +42,17 @@ Completion milestone: Frontend, backend, and MongoDB are connected.
 *1.9  Generate JWT on login
 *1.10 Create authentication middleware
 *1.11 Add protected /me route
--1.12 Add logout
+*1.12 Add logout
 
 Completion milestone: A user can register, log in, and access protected data.
 
 
 # PHASE 2 — DEVELOPER PROFILE
 ---------------------------
-2.1  Create DeveloperProfile schema
-2.2  Create profile API
-2.3  Get profile API
-2.4  Update profile API
+*2.1  Create DeveloperProfile schema
+*2.2  Create profile API
+*2.3  Get profile API
+-2.4  Update profile API
 2.5  Add skills field
 2.6  Add GitHub URL
 2.7  Add portfolio URL

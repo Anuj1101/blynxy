@@ -12,6 +12,7 @@ const port=process.env.PORT;
 const authRoutes=require('./routes/authRoutes')
 const authmiddleware=require('./middlewares/authmiddleware')
 const userRoutes=require('./routes/userRoutes')
+const developerRoutes=require('./routes/developerRoute')
 connectDb();
 
 app.get('/health',(req,res)=>{
@@ -25,6 +26,7 @@ app.post('/health',(req,res)=>{
 
 app.use('/api/auth/',authRoutes)
 app.use('/api/',authmiddleware,userRoutes)
+app.use('/api/',authmiddleware,developerRoutes)
 
 app.listen(port,()=>{
     console.log(`server started at http://localhost:${port}`)

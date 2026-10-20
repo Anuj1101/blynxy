@@ -14,14 +14,15 @@ const authmiddleware = (req, res, next) => {
         
         const token = authHeader.split(' ')[1];
 
-        const user = jwt.verify(token, process.env.JWT_SECRET);
+        const user = jwt.verify(token, process.env.ACCESS_JWT_SECRET);
 
         req.user = user;
 
         next();
     } catch (error) {
         return res.status(401).json({
-            message: 'Invalid or expired token'
+            message: 'Invalid or expired token',
+            err:error.message
         });
     }
 };

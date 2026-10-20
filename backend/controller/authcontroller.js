@@ -39,7 +39,7 @@ const loginUser=async(req,res)=>{
         id:existingUser._id,
         name:existingUser.name,
         email:existingUser.email
-    },process.env.ACCESS_JWT_SECRET,{expiresIn:'5m'})
+    },process.env.ACCESS_JWT_SECRET,{expiresIn:'15m'})
     const refreshtoken=await jwt.sign({
         id:existingUser._id,
         name:existingUser.name,
@@ -55,9 +55,14 @@ const loginUser=async(req,res)=>{
     })
     } catch (error) {
         res.status(500).json({
-            message:error.message
+            message:error.message,
+            success:false
         })
     }
+}
+
+const logout=(req,res)=>{
+    return res.status(201).json({message:"logged out successfully"})
 }
 
 const refreshAccessToken = async (req, res) => {
@@ -113,4 +118,4 @@ const refreshAccessToken = async (req, res) => {
   }
 };
 
-module.exports={registerUser,loginUser,refreshAccessToken}
+module.exports={registerUser,loginUser,refreshAccessToken,logout}

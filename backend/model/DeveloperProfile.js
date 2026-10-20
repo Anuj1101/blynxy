@@ -1,0 +1,41 @@
+const mongoose=require('mongoose')
+const developerProfieSchema=new mongoose.Schema({
+    userId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User',
+        required:true,
+        unique:true
+    },
+    username:{
+        type:String,
+        unique:true,
+        required:true,
+        trim:true
+    },
+    bio:{
+        type:String,
+        default:null
+    },
+    skills:{
+        type:[String],
+        default:[]
+    },
+    githuburl:{
+        type:String,
+        default:null
+    },
+    portfolioUrl:{
+        type:String,
+        default:null
+    },
+    avatarUrl:{
+        type:String,
+        default:null
+    },
+    visibility:{
+        type:String,
+        enum:["public","private"],
+        default:"public"
+    },
+})
+module.exports=mongoose.model('Developer',developerProfieSchema)
