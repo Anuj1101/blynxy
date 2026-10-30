@@ -10,11 +10,14 @@ const developerProfieSchema=new mongoose.Schema({
         type:String,
         unique:true,
         required:true,
+        minlength:3,
+        maxlength:20,
         trim:true
     },
     bio:{
         type:String,
-        default:null
+        default:null,
+        maxlength:200
     },
     skills:{
         type:[String],

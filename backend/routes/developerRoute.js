@@ -1,6 +1,8 @@
 const express=require('express')
-const { profile } = require('../controller/developercontroller')
+const { profile, updateProfile } = require('../controller/developercontroller')
+const authmiddleware=require('../middlewares/authmiddleware')
 const router=express.Router()
-router.get('/devProfile',profile)
+router.get('/devProfile',authmiddleware,profile)
+router.put('/updatedev',authmiddleware,updateProfile)
 
 module.exports=router

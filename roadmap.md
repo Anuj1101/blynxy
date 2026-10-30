@@ -52,11 +52,11 @@ Completion milestone: A user can register, log in, and access protected data.
 *2.1  Create DeveloperProfile schema
 *2.2  Create profile API
 *2.3  Get profile API
--2.4  Update profile API
-2.5  Add skills field
-2.6  Add GitHub URL
-2.7  Add portfolio URL
-2.8  Create developer profile frontend
+*2.4  Update profile API
+*2.5  Add skills field
+*2.6  Add GitHub URL
+*2.7  Add portfolio URL
+-2.8  Create developer profile frontend
 2.9  Create edit-profile UI
 2.10 Add public profile route
 
