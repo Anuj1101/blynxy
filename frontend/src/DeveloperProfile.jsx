@@ -24,14 +24,8 @@ const DeveloperProfile=()=>{
         return(<h2>loaading....</h2>)
     }
 
-    return(<div className="bg-[#0B1120] h-screen">
-    <div className="bg-[#111B2E] h-screen w-[20%] ">
-        <div className="h-[15%] text-2xl text-center p-[40px]"> Blynx </div>
-        <div className=" text-center active:bg-[#6366F1] rounded p-1">Dashboard</div>
-    </div>
-    <div>
-        hii
-    </div>
-    </div>)
+    return(<>
+    DeveloperProfile
+    </>)
 }
 export default DeveloperProfile;
