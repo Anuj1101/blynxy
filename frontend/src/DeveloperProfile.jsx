@@ -24,8 +24,7 @@ const DeveloperProfile=()=>{
         return(<h2>loaading....</h2>)
     }
 
-    return(<>
-    DeveloperProfile
+    return(<>{data.name}
     </>)
 }
 export default DeveloperProfile;
