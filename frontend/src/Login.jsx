@@ -37,7 +37,6 @@ const Login = () => {
       localStorage.setItem('accessToken', token)
 
       console.log('Logged in successfully')
-      useNavigate('/login')
 
     } catch (error) {
       setError(
